@@ -1,0 +1,87 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultra-Cool Health Metrics Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <div id="bg-canvas"></div>
+    <div class="theme-toggle">
+        <button id="themeToggle">Toggle Theme</button>
+    </div>
+    <div class="content-wrapper">
+        <div class="container glow">
+            <h1 class="float">Ultra-Cool Health Metrics Calculator</h1>
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="weight">Weight:</label>
+                    <input type="number" id="weight" required>
+                    <select id="weightUnit">
+                        <option value="kg">kg</option>
+                        <option value="lbs">lbs</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="height">Height:</label>
+                    <input type="number" id="height" required>
+                    <select id="heightUnit">
+                        <option value="cm">cm</option>
+                        <option value="in">in</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" required>
+                </div>
+                <div class="input-group">
+                    <label for="gender">Gender:</label>
+                    <select id="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="activityLevel">Activity Level:</label>
+                    <select id="activityLevel">
+                        <option value="sedentary">Sedentary</option>
+                        <option value="light">Lightly Active</option>
+                        <option value="moderate">Moderately Active</option>
+                        <option value="very">Very Active</option>
+                        <option value="extra">Extra Active</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="waist">Waist Circumference:</label>
+                    <input type="number" id="waist" required>
+                    <select id="waistUnit">
+                        <option value="cm">cm</option>
+                        <option value="in">in</option>
+                    </select>
+                </div>
+                <button id="calculateBtn" class="glow">Calculate Health Metrics</button>
+            </div>
+            <div class="results-section">
+                <div id="bmiResult" class="result-item"></div>
+                <div id="bodyFatResult" class="result-item"></div>
+                <div id="bmrResult" class="result-item"></div>
+                <div id="calorieNeedsResult" class="result-item"></div>
+                <div id="waistHeightRatio" class="result-item"></div>
+                <div id="healthRisks" class="result-item"></div>
+                <div id="healthAdvice" class="result-item"></div>
+            </div>
+        </div>
+        <div class="charts-container glow">
+            <canvas id="progressChart"></canvas>
+            <canvas id="bmiTrendsChart"></canvas>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
